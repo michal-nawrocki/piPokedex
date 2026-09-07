@@ -1,0 +1,18 @@
+[project]
+name = "poc-camera"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Mike Nawrocki", email = "michal.m.nawrocki@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "opencv-python>=5.0.0.93",
+]
+
+[project.scripts]
+poc-camera = "poc_camera:main"
+
+[tools.uv]
+package = false
