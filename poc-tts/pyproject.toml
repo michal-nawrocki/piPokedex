@@ -1,0 +1,20 @@
+[project]
+name = "poc-tts"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Mike Nawrocki", email = "michal.m.nawrocki@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "piper-tts>=1.8.0",
+    "sounddevice>=0.5.6",
+    "soundfile>=0.14.0",
+]
+
+[project.scripts]
+poc-tts = "poc_tts:main"
+
+[tools.uv]
+package = false

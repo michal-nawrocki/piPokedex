@@ -219,3 +219,7 @@ __marimo__/
 
 # PyCharm
 .idea/*
+
+# TTS models used by Piper
+*.onnx
+*.onnx.json
