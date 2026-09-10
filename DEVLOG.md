@@ -81,5 +81,30 @@ then read the flavor text in Polish. With this I would get 2 audio files that ca
 
 For now this will be the approach I take and continue structuring the project around. Maybe with some more research I can combine the phonemes as planed?
 
+## 2026.09.11 - Displaying and thinking about UI
+So I don't really have too much time today for this project, but I was thinking instead of working on the data scrapping for prebuilding a DB,
+I wanted to have some UI and have a think about how I want to display things. The major concern is that I want to display the camera feed
+for the time when you are scanning the card. And I want to then display the sprite and do other fancy things. For this, it seems that `pyGame` will
+be a very good tool to have interactivity and handle inputs.
 
+### POC - Display image of pokemon on screen
+Pygame will be running on the "main" thread of the process. It will take over the display and the inputs. We can have the camera feed
+displayed as a sprite/surface in Pygame. Let's work on this.
 
+Like said the setup here is pretty straight forward:
+1. Open CV2
+2. Read frame from camera
+3. Convert camera frame to pygame surface and display it
+4. Load sprite for simplicity
+5. If key press detected, change from camera mode to sprite mode
+6. ??
+7. Profit!
+
+Here's a gif showing how the pygame demo:
+
+![poc-ui-change_between_camer_and_sprite.gif](static/img/poc-ui-change_between_camer_and_sprite.gif)
+
+With this simple demo I've proven that I can show the camera feed, display text. I susepct that I can also put the 
+synthesized speech into the pygame process without bigger issues, making it even more compact.
+
+So the only thing left to prove is read from card text and try to normalize so that we can query our local dataset of Pokémon!.
